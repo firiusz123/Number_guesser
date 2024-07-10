@@ -126,7 +126,7 @@ while running:
     with torch.no_grad():
         output = model(canvas_image)
         _, predicted_digit = torch.max(output, 1)
-        print(predicted_digit)
+        #print(predicted_digit)
     text_surface = font.render(f"The number predicted is {predicted_digit.item()}", True, FONT_COLOR)
     screen.blit(text_surface, FONT_POSITION1)
 
