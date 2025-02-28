@@ -75,17 +75,18 @@ BACKGROUND_COLOR = (0, 0, 0)  # Black background
 LINE_COLOR = (255, 255, 255)  # White drawing color
 LINE_WIDTH = 5
 CIRCLE_RADIUS = 20  # Radius of the circle to be drawn
-FONT_SIZE = 25
+FONT_SIZE = 20
 FONT_COLOR = (255, 255, 255)
 FONT_POSITION = (WIDTH - 120, 20)  # Position for the text (top right corner)
 FONT_POSITION1 = (WIDTH - 500, 20)
+FONT_SIZE1 = 25
 
 # Create the screen
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Simple Drawing App")
 
 # Create a font object
-font = pygame.font.Font(None, FONT_SIZE)
+font = pygame.font.Font(None, FONT_SIZE1)
 
 # Variables
 drawing = False
@@ -135,6 +136,7 @@ while running:
     #print(np.shape(canvas_array))  # Print the array for demonstration
 
     # Draw text on the screen (outside canvas)
+    font = pygame.font.Font(None, FONT_SIZE)
     text_surface = font.render("Press 'r' to clear", True, FONT_COLOR)
     screen.blit(text_surface, FONT_POSITION)
 
